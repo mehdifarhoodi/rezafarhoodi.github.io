@@ -1,0 +1,3 @@
+const hamburger=document.querySelector('.hamburger-menu');const mobileNav=document.querySelector('.mobile-nav');const overlay=document.querySelector('.mobile-overlay');const closeBtn=document.querySelector('.close-btn');const mobileNavLinks=document.querySelectorAll('.mobile-nav a');function openMenu(){mobileNav.classList.add('open');overlay.classList.add('active')}
+function closeMenu(){mobileNav.classList.remove('open');overlay.classList.remove('active')}
+hamburger.addEventListener('click',openMenu);closeBtn.addEventListener('click',closeMenu);overlay.addEventListener('click',closeMenu);mobileNavLinks.forEach(link=>{link.addEventListener('click',closeMenu)})
